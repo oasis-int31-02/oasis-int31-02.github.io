@@ -217,7 +217,7 @@
     setSlider(50);
     const chain = $("chain");
     chain.textContent = "";
-    $("toMindBtn").hidden = true;
+    $("toMindBtn").disabled = true;           // enabled after the last chain step appears
     show("impact");
     stopSound(true);
 
@@ -229,7 +229,8 @@
       chain.append(li);
       impactTimers.push(setTimeout(() => li.classList.add("show"), 900 + i * 1100));
     });
-    impactTimers.push(setTimeout(() => { $("toMindBtn").hidden = false; }, 900 + items.length * 1100));
+    // +500 ms lets the last step finish fading in before the button unlocks.
+    impactTimers.push(setTimeout(() => { $("toMindBtn").disabled = false; }, 900 + (items.length - 1) * 1100 + 500));
   }
   function setSlider(v) {
     $("slider").value = v;
