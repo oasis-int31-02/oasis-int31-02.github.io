@@ -64,12 +64,12 @@ window.OASIS_CONFIG = {
       chain: {
         en: [
           "The water level drops and the pond dries out.",
-          "Fish die and monitor lizards lose their hunting ground.",
+          "Water plants wilt and monitor lizards lose their hunting ground.",
           "Birds stop coming to drink, and the fountain goes silent."
         ],
         th: [
           "ระดับน้ำลดลงจนบ่อน้ำแห้ง",
-          "ปลาตาย และตัวเงินตัวทองสูญเสียแหล่งหาอาหาร",
+          "พืชน้ำเหี่ยวเฉา และตัวเงินตัวทองสูญเสียแหล่งหาอาหาร",
           "นกไม่มาดื่มน้ำอีกต่อไป และน้ำพุก็เงียบลง"
         ]
       },
@@ -126,41 +126,18 @@ window.OASIS_CONFIG = {
       sound: ""
     },
     {
-      id: "fish", icon: "🐟",
-      name: { en: "Fish", th: "ปลา" },
-      before: "images/fish-before.jpg", after: "images/fish-after.jpg",
-      eco: 15, peace: 10,
-      chain: {
-        en: [
-          "Fish stop eating mosquito larvae and algae.",
-          "The pond turns green and murky.",
-          "More mosquitoes fly around the benches."
-        ],
-        th: [
-          "ไม่มีปลาคอยกินลูกน้ำและตะไคร่น้ำ",
-          "น้ำในบ่อกลายเป็นสีเขียวและขุ่น",
-          "ยุงบินวนรอบม้านั่งมากขึ้น"
-        ]
-      },
-      mind: {
-        en: "Families feed and watch the fish together. Losing them removes a small, shared moment of calm.",
-        th: "หลายครอบครัวมาให้อาหารและชมปลาด้วยกัน การสูญเสียปลาจึงทำให้ช่วงเวลาแห่งความสงบเล็ก ๆ ที่ได้แบ่งปันกันหายไป"
-      },
-      sound: ""
-    },
-    {
       id: "lizards", icon: "🦎",
       name: { en: "Monitor lizards", th: "ตัวเงินตัวทอง" },
       before: "images/lizards-before.jpg", after: "images/lizards-after.jpg",
       eco: 15, peace: 5,
       chain: {
         en: [
-          "Monitor lizards stop eating rats, dead fish and scraps.",
+          "Monitor lizards stop eating rats, dead animals and scraps.",
           "Rats and waste build up around the pond.",
           "The park becomes less clean and less healthy."
         ],
         th: [
-          "ไม่มีตัวเงินตัวทองคอยกินหนู ปลาตาย และเศษอาหาร",
+          "ไม่มีตัวเงินตัวทองคอยกินหนู ซากสัตว์ และเศษอาหาร",
           "หนูและขยะสะสมอยู่รอบบ่อน้ำ",
           "สวนสะอาดน้อยลงและไม่ถูกสุขลักษณะ"
         ]

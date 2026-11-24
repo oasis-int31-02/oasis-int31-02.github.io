@@ -24,7 +24,7 @@ For each element in `config.js`, add two files to `images/`:
 - `trees-before.jpg`: the real photo from Thonburirom Park
 - `trees-after.jpg`: the AI-edited version of **the same photo**, with the same framing and size
 
-The other elements follow the same pattern: `pond`, `squirrels`, `birds`, `fish`, `lizards`, `flowers`.
+The other elements follow the same pattern: `pond`, `squirrels`, `birds`, `lizards`, `flowers`.
 A missing image shows a striped placeholder with the expected filename, so you can see what's still needed.
 
 - **Use JPG, not HEIC.** Most browsers can't show HEIC. On iPhone, set Settings → Camera → Formats → *Most Compatible*, or export the photos as JPG.
