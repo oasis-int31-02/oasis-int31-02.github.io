@@ -66,5 +66,38 @@ window.OasisDB = (function () {
     });
   }
 
-  return { live, addLeaf, listLeaves };
+  // ---- Demo-mode testing helpers (never touch Firestore) ----
+  // Open index.html?seed=150 to add 150 sample leaves, ?clear to remove all.
+  const SAMPLE = {
+    text: [
+      "Morning walk by the pond", "Five quiet minutes on a bench", "Watching birds with my family",
+      "Fresh air after a stressful week", "Reading under a big tree", "Jogging at sunset",
+      "Listening to the fountain", "Feeding the squirrels", "Picnic with friends on the grass",
+      "เดินเล่นยามเช้าริมบ่อน้ำ", "นั่งพักใต้ต้นไม้ใหญ่", "ฟังเสียงนกร้องตอนเช้า",
+      "วิ่งออกกำลังกายตอนเย็น", "นั่งดูน้ำพุหลังเลิกเรียน", "ปิกนิกกับครอบครัว"
+    ],
+    name: ["", "", "Mya", "Ton", "Aung", "Ploy", "Htet", "Nok", "Khin", "Bank", "มายด์", "ต้น"],
+    element: ["trees", "pond", "squirrels", "birds", "lizards", "flowers"],
+    mood: ["calm", "hope", "grateful", "refreshed"]
+  };
+  const pick = a => a[Math.floor(Math.random() * a.length)];
+
+  function seedDemo(n) {
+    if (live) return 0;
+    const now = Date.now();
+    const fake = Array.from({ length: n }, (_, i) => ({
+      element: pick(SAMPLE.element),
+      mood: pick(SAMPLE.mood),
+      text: pick(SAMPLE.text),
+      name: pick(SAMPLE.name),
+      calm: 1 + Math.floor(Math.random() * 5),
+      // spread over the last few hours; unique timestamps keep leaf positions distinct
+      createdAt: new Date(now - (i + 1) * 37000 - Math.floor(Math.random() * 30000)).toISOString()
+    }));
+    demoWrite(demoRead().concat(fake).slice(0, 300));
+    return n;
+  }
+  function clearDemo() { if (!live) demoWrite([]); }
+
+  return { live, addLeaf, listLeaves, seedDemo, clearDemo };
 })();

@@ -432,6 +432,17 @@
   $("toLeafBtn").addEventListener("click", () => show("leaf"));
   $("againBtn").addEventListener("click", () => { stopTimer(); play(""); show("intro"); });
 
+  // Demo-mode test helpers: ?seed=150 adds sample leaves, ?clear removes all.
+  // Ignored when Firebase is configured, so they can't touch real data.
+  const params = new URLSearchParams(location.search);
+  let testMode = false;
+  if (!DB.live && params.has("clear")) { DB.clearDemo(); testMode = true; }
+  if (!DB.live && params.has("seed")) {
+    DB.seedDemo(Math.max(1, Math.min(300, parseInt(params.get("seed"), 10) || 100)));
+    testMode = true;
+  }
+  if (testMode) history.replaceState(null, "", location.pathname + "#tree");   // so a refresh doesn't seed again
+
   // Kiosk shortcut: open directly on the tree with  index.html#tree
-  if (location.hash === "#tree") openTree();
+  if (testMode || location.hash === "#tree") openTree();
 })();

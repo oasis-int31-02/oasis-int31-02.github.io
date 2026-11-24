@@ -8,8 +8,8 @@ window.OASIS_CONFIG = {
   // Leave projectId empty to run in DEMO mode (data saved only in this
   // browser). Fill both values from Firebase console → Project settings.
   firebase: {
-    projectId: "",
-    apiKey: ""
+    projectId: "oasis-int31-02",
+    apiKey: "AIzaSyAe-naHXWRCceIH7FZObyRDYX1X5YPuNXc"
   },
 
   // Field-work location (Thonburirom Park). lat/lng are shown as text;
