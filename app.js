@@ -39,6 +39,8 @@
       });
     }
     if (state.errKey) showError(state.errKey, state.errDetail);
+    renderSoundBtn();
+    renderCaption();
     if (!$("s-tree").hidden) renderTree();
     $("modeNote").textContent = DB.live ? "" : t("demo");
   }
@@ -95,12 +97,61 @@
   }
   function stopTimer() { clearInterval(state.timerId); $("timer").hidden = true; }
 
-  // ---------- sound ----------
-  function play(src) {
-    const a = $("audio");
-    if (!src) { a.pause(); return; }
-    a.src = src; a.loop = true; a.volume = 0.6;
-    a.play().catch(() => { /* autoplay blocked or file missing: ignore */ });
+  // ---------- sound (light version: nature returns when restored) ----------
+  const audio = $("audio");
+  const SOUND_KEY = "oasis-sound";
+  const MAX_VOL = 0.7;
+  let soundOn = true;
+  try { soundOn = localStorage.getItem(SOUND_KEY) !== "off"; } catch (e) { /* ignore */ }
+  let fadeId = 0;
+  let captionEl = null;          // element whose sound is currently playing
+
+  function fadeTo(target, ms, done) {
+    clearInterval(fadeId);
+    const from = audio.volume, t0 = performance.now();
+    fadeId = setInterval(() => {
+      const k = Math.min(1, (performance.now() - t0) / ms);
+      audio.volume = Math.max(0, Math.min(1, from + (target - from) * k));
+      if (k >= 1) { clearInterval(fadeId); if (done) done(); }
+    }, 40);
+  }
+  function renderCaption() {
+    const cap = $("soundCaption");
+    if (!captionEl || !captionEl.soundCaption) { cap.hidden = true; return; }
+    cap.textContent = (soundOn ? "🔊 " : "🔇 ") + L(captionEl.soundCaption) + (soundOn ? "" : " " + t("captionMuted"));
+    cap.hidden = false;
+  }
+  function renderSoundBtn() {
+    const b = $("soundBtn");
+    b.textContent = soundOn ? "🔊" : "🔇";
+    b.setAttribute("aria-pressed", String(soundOn));
+    b.setAttribute("aria-label", t(soundOn ? "soundOnAria" : "soundOffAria"));
+    b.title = t(soundOn ? "soundOnAria" : "soundOffAria");
+  }
+  function playNature(el) {
+    stopSound(true);
+    if (!el.sound) return;
+    audio.loop = true;
+    audio.volume = 0;
+    audio.muted = !soundOn;                      // muted playback still confirms the file exists
+    audio.onplaying = () => { captionEl = el; renderCaption(); };
+    audio.onerror = () => { captionEl = null; renderCaption(); };   // missing file: no caption
+    audio.src = el.sound;
+    audio.play().then(() => fadeTo(MAX_VOL, 2500)).catch(() => { /* blocked or missing: stay silent */ });
+  }
+  function stopSound(immediate) {
+    captionEl = null;
+    renderCaption();
+    if (audio.paused) return;
+    if (immediate) { clearInterval(fadeId); audio.pause(); return; }
+    fadeTo(0, 1200, () => audio.pause());
+  }
+  function toggleSound() {
+    soundOn = !soundOn;
+    try { localStorage.setItem(SOUND_KEY, soundOn ? "on" : "off"); } catch (e) { /* ignore */ }
+    audio.muted = !soundOn;
+    renderSoundBtn();
+    renderCaption();
   }
 
   // ---------- images with placeholder fallback ----------
@@ -167,7 +218,7 @@
     chain.textContent = "";
     $("toMindBtn").hidden = true;
     show("impact");
-    play("");
+    stopSound(true);
 
     impactTimers.push(setTimeout(() => setMeters(100 - el.eco, state.peace), 400));
     const items = L(el.chain);
@@ -198,7 +249,7 @@
   function restore() {
     show("restored");
     setTimeout(() => setMeters(100, 100), 300);
-    play(state.chosen.sound || C.ambientSound);
+    playNature(state.chosen);
   }
 
   // ---------- leaf form ----------
@@ -395,6 +446,7 @@
   }
   async function openTree() {
     show("tree");
+    stopSound(false);
     $("modeNote").textContent = DB.live ? "" : t("demo");
     renderTree();
     await refreshTree();
@@ -424,13 +476,14 @@
   buildLeafForm();
   applyLang();
   $("langSel").addEventListener("change", e => { window.OasisI18n.setLang(e.target.value); applyLang(); });
-  $("startBtn").addEventListener("click", () => { play(C.ambientSound); restart(); });
+  $("soundBtn").addEventListener("click", toggleSound);
+  $("startBtn").addEventListener("click", restart);
   $("treeOnlyBtn").addEventListener("click", openTree);
   $("slider").addEventListener("input", e => setSlider(e.target.value));
   $("toMindBtn").addEventListener("click", toMind);
   $("restoreBtn").addEventListener("click", restore);
   $("toLeafBtn").addEventListener("click", () => show("leaf"));
-  $("againBtn").addEventListener("click", () => { stopTimer(); play(""); show("intro"); });
+  $("againBtn").addEventListener("click", () => { stopTimer(); stopSound(true); show("intro"); });
 
   // Demo-mode test helpers: ?seed=150 adds sample leaves, ?clear removes all.
   // Ignored when Firebase is configured, so they can't touch real data.

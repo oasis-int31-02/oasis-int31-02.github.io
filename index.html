@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Oasis in the Desert</title>
 <meta name="description" content="What happens to nature, and to our peace of mind, when one piece disappears?">
-<link rel="stylesheet" href="style.css?v=881d1647cd">
+<link rel="stylesheet" href="style.css?v=a4d150392d">
 </head>
 <body>
 
@@ -13,6 +13,7 @@
   <span class="brand" data-i18n="brand">Oasis in the Desert</span>
   <div class="top-right">
     <span id="timer" class="timer" hidden>3:00</span>
+    <button type="button" id="soundBtn" class="sound-btn" aria-pressed="true">🔊</button>
     <select id="langSel" class="lang" data-i18n-aria="langLabel" aria-label="Language">
       <option value="en">English</option>
       <option value="th">ไทย</option>
@@ -43,6 +44,7 @@
       <li data-i18n="step2"></li>
       <li data-i18n="step3"></li>
     </ol>
+    <p class="sound-note" data-i18n="soundNote"></p>
     <button class="btn primary" id="startBtn" data-i18n="start"></button>
     <button class="btn link" id="treeOnlyBtn" data-i18n="treeOnly"></button>
   </section>
@@ -86,6 +88,7 @@
       <div class="big-emoji">😌</div>
       <p data-i18n-html="restoredHtml"></p>
     </div>
+    <p class="caption" id="soundCaption" hidden></p>
     <p class="quote" data-i18n="quote"></p>
     <button class="btn primary" id="toLeafBtn" data-i18n="toLeaf"></button>
   </section>
@@ -129,9 +132,9 @@
 </main>
 
 <audio id="audio" preload="none"></audio>
-<script src="config.js?v=a3da4b3774"></script>
-<script src="i18n.js?v=e02080b8f9"></script>
+<script src="config.js?v=9bca0596f0"></script>
+<script src="i18n.js?v=e8844387c4"></script>
 <script src="db.js?v=49075e8b69"></script>
-<script src="app.js?v=6ae4ba8565"></script>
+<script src="app.js?v=34276f4678"></script>
 </body>
 </html>

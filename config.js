@@ -31,7 +31,9 @@ window.OASIS_CONFIG = {
   // peace:  how much Peace of Mind drops when removed (0-100)
   // chain:  the ecosystem chain reaction (shown step by step)
   // mind:   how that loss affects people's mental well-being
-  // sound:  optional ambient sound file for this element (mp3/ogg), or ""
+  // sound:  nature sound played when the visitor brings it back (mp3), or ""
+  // soundCaption: what the sound is, shown as a caption (add e.g. "recorded at
+  //         Thonburirom Park" or the library credit here)
   elements: [
     {
       id: "trees", icon: "🌳",
@@ -54,7 +56,8 @@ window.OASIS_CONFIG = {
         en: "Shady trees were where visitors told us they rest and slow down. Without them, the park stops feeling like an escape from the busy city.",
         th: "ผู้มาเยือนเล่าให้เราฟังว่าร่มไม้คือที่ที่พวกเขามาพักผ่อนและผ่อนคลาย หากไม่มีต้นไม้ สวนแห่งนี้ก็ไม่ใช่ที่หลบพักจากเมืองที่วุ่นวายอีกต่อไป"
       },
-      sound: ""
+      sound: "sounds/trees.mp3?v=59fc0340cb",
+      soundCaption: { en: "Wind rustling through the leaves", th: "เสียงลมพัดผ่านใบไม้" }
     },
     {
       id: "pond", icon: "💧",
@@ -77,7 +80,8 @@ window.OASIS_CONFIG = {
         en: "The sound and sight of water is calming. Many visitors sit by the pond and fountain to clear their minds.",
         th: "เสียงและภาพของสายน้ำช่วยให้จิตใจสงบ ผู้มาเยือนหลายท่านนั่งพักริมบ่อน้ำและน้ำพุเพื่อให้จิตใจปลอดโปร่ง"
       },
-      sound: ""
+      sound: "sounds/pond.mp3",
+      soundCaption: { en: "The fountain and flowing water", th: "เสียงน้ำพุและสายน้ำไหล" }
     },
     {
       id: "squirrels", icon: "🐿️",
@@ -100,7 +104,8 @@ window.OASIS_CONFIG = {
         en: "Watching small animals play is a simple joy. It pulls our attention away from worries and into the present moment.",
         th: "การได้มองสัตว์ตัวเล็ก ๆ เล่นกันเป็นความสุขที่เรียบง่าย ช่วยดึงความสนใจออกจากความกังวล และกลับมาอยู่กับปัจจุบัน"
       },
-      sound: ""
+      sound: "sounds/squirrels.mp3",
+      soundCaption: { en: "Squirrels chattering in the trees", th: "เสียงกระรอกร้องบนต้นไม้" }
     },
     {
       id: "birds", icon: "🐦",
@@ -123,7 +128,8 @@ window.OASIS_CONFIG = {
         en: "Birdsong is one of the sounds people link most with feeling relaxed. A silent park feels empty.",
         th: "เสียงนกร้องเป็นหนึ่งในเสียงที่ผู้คนรู้สึกผ่อนคลายมากที่สุด สวนที่เงียบงันจึงให้ความรู้สึกว่างเปล่า"
       },
-      sound: ""
+      sound: "sounds/birds.mp3",
+      soundCaption: { en: "Morning birdsong", th: "เสียงนกร้องยามเช้า" }
     },
     {
       id: "lizards", icon: "🦎",
@@ -146,7 +152,8 @@ window.OASIS_CONFIG = {
         en: "A clean, healthy park is one people feel safe and comfortable relaxing in.",
         th: "สวนที่สะอาดและสมบูรณ์คือสถานที่ที่ผู้คนรู้สึกปลอดภัยและสบายใจที่จะมาพักผ่อน"
       },
-      sound: ""
+      sound: "sounds/lizards.mp3",
+      soundCaption: { en: "A rustle in the grass and a splash into the pond", th: "เสียงสวบสาบในพงหญ้าและเสียงลงน้ำ" }
     },
     {
       id: "flowers", icon: "🌸",
@@ -169,12 +176,10 @@ window.OASIS_CONFIG = {
         en: "Colour and natural beauty lift our mood. A grey park feels like more of the city.",
         th: "สีสันและความงามของธรรมชาติช่วยให้อารมณ์ดีขึ้น สวนที่หม่นหมองก็ไม่ต่างอะไรจากเมือง"
       },
-      sound: ""
+      sound: "sounds/flowers.mp3",
+      soundCaption: { en: "Bees humming in the breeze", th: "เสียงผึ้งบินหึ่งท่ามกลางสายลม" }
     }
   ],
-
-  // Optional background park ambience on the first screen ("" = none).
-  ambientSound: "",
 
   // ---- Leaf moods (the narrative-board colours) ----------------------
   moods: [
