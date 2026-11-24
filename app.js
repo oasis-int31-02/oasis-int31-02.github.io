@@ -41,6 +41,7 @@
     if (state.errKey) showError(state.errKey, state.errDetail);
     renderSoundBtn();
     renderCaption();
+    renderToLeafBtn();
     if (!$("s-tree").hidden) renderTree();
     $("modeNote").textContent = DB.live ? "" : t("demo");
   }
@@ -246,10 +247,30 @@
   }
 
   // ---------- restore ----------
+  // "Add your leaf" waits a few seconds so visitors hear nature come back.
+  const LISTEN_SECONDS = 5;
+  let leafWait = 0, leafWaitId = 0;
+  function renderToLeafBtn() {
+    const b = $("toLeafBtn");
+    b.textContent = t("toLeaf") + (leafWait > 0 ? ` (${leafWait})` : "");
+    b.disabled = leafWait > 0;
+  }
+  function startLeafCountdown() {
+    clearInterval(leafWaitId);
+    leafWait = LISTEN_SECONDS;
+    renderToLeafBtn();
+    leafWaitId = setInterval(() => {
+      leafWait -= 1;
+      renderToLeafBtn();
+      if (leafWait <= 0) clearInterval(leafWaitId);
+    }, 1000);
+  }
+
   function restore() {
     show("restored");
     setTimeout(() => setMeters(100, 100), 300);
     playNature(state.chosen);
+    startLeafCountdown();
   }
 
   // ---------- leaf form ----------

@@ -80,7 +80,7 @@ window.OASIS_CONFIG = {
         en: "The sound and sight of water is calming. Many visitors sit by the pond and fountain to clear their minds.",
         th: "เสียงและภาพของสายน้ำช่วยให้จิตใจสงบ ผู้มาเยือนหลายท่านนั่งพักริมบ่อน้ำและน้ำพุเพื่อให้จิตใจปลอดโปร่ง"
       },
-      sound: "sounds/pond.mp3",
+      sound: "sounds/pond.mp3?v=b2faf4eed1",
       soundCaption: { en: "The fountain and flowing water", th: "เสียงน้ำพุและสายน้ำไหล" }
     },
     {
@@ -104,7 +104,7 @@ window.OASIS_CONFIG = {
         en: "Watching small animals play is a simple joy. It pulls our attention away from worries and into the present moment.",
         th: "การได้มองสัตว์ตัวเล็ก ๆ เล่นกันเป็นความสุขที่เรียบง่าย ช่วยดึงความสนใจออกจากความกังวล และกลับมาอยู่กับปัจจุบัน"
       },
-      sound: "sounds/squirrels.mp3",
+      sound: "sounds/squirrels.mp3?v=eeeb97c7b6",
       soundCaption: { en: "Squirrels chattering in the trees", th: "เสียงกระรอกร้องบนต้นไม้" }
     },
     {
@@ -128,7 +128,7 @@ window.OASIS_CONFIG = {
         en: "Birdsong is one of the sounds people link most with feeling relaxed. A silent park feels empty.",
         th: "เสียงนกร้องเป็นหนึ่งในเสียงที่ผู้คนรู้สึกผ่อนคลายมากที่สุด สวนที่เงียบงันจึงให้ความรู้สึกว่างเปล่า"
       },
-      sound: "sounds/birds.mp3",
+      sound: "sounds/birds.mp3?v=3e451e8338",
       soundCaption: { en: "Morning birdsong", th: "เสียงนกร้องยามเช้า" }
     },
     {
@@ -152,7 +152,7 @@ window.OASIS_CONFIG = {
         en: "A clean, healthy park is one people feel safe and comfortable relaxing in.",
         th: "สวนที่สะอาดและสมบูรณ์คือสถานที่ที่ผู้คนรู้สึกปลอดภัยและสบายใจที่จะมาพักผ่อน"
       },
-      sound: "sounds/lizards.mp3",
+      sound: "sounds/lizards.mp3?v=8b000d6ac1",
       soundCaption: { en: "A rustle in the grass and a splash into the pond", th: "เสียงสวบสาบในพงหญ้าและเสียงลงน้ำ" }
     },
     {
@@ -176,7 +176,7 @@ window.OASIS_CONFIG = {
         en: "Colour and natural beauty lift our mood. A grey park feels like more of the city.",
         th: "สีสันและความงามของธรรมชาติช่วยให้อารมณ์ดีขึ้น สวนที่หม่นหมองก็ไม่ต่างอะไรจากเมือง"
       },
-      sound: "sounds/flowers.mp3",
+      sound: "sounds/flowers.mp3?v=98f49ea528",
       soundCaption: { en: "Bees humming in the breeze", th: "เสียงผึ้งบินหึ่งท่ามกลางสายลม" }
     }
   ],
