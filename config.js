@@ -36,7 +36,7 @@ window.OASIS_CONFIG = {
     {
       id: "trees", icon: "🌳",
       name: { en: "Trees", th: "ต้นไม้" },
-      before: "images/trees-before.jpg", after: "images/trees-after.jpg",
+      before: "images/trees-before.jpg?v=1872022ab3", after: "images/trees-after.jpg?v=d8c02061a7",
       eco: 50, peace: 40,
       chain: {
         en: [
@@ -59,7 +59,7 @@ window.OASIS_CONFIG = {
     {
       id: "pond", icon: "💧",
       name: { en: "Pond & water", th: "บ่อน้ำและแหล่งน้ำ" },
-      before: "images/pond-before.jpg", after: "images/pond-after.jpg",
+      before: "images/pond-before.jpg?v=c23b5f142f", after: "images/pond-after.jpg?v=1e2d59845a",
       eco: 40, peace: 35,
       chain: {
         en: [
@@ -174,7 +174,7 @@ window.OASIS_CONFIG = {
     {
       id: "flowers", icon: "🌸",
       name: { en: "Flowers", th: "ดอกไม้" },
-      before: "images/flowers-before.jpg", after: "images/flowers-after.jpg",
+      before: "images/flowers-before.jpg?v=108902dd78", after: "images/flowers-after.jpg?v=ece86f41eb",
       eco: 20, peace: 25,
       chain: {
         en: [

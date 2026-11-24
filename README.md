@@ -70,6 +70,17 @@ service cloud.firestore {
 - **Moderation:** delete inappropriate leaves in the Firestore console. They disappear from the tree within about 15 seconds.
 - **Free tier (Spark):** 50k reads and 20k writes a day, far more than an exhibition needs.
 
+## Cache busting (run before every upload)
+```
+cd site
+python3 bust_cache.py
+```
+- The script adds `?v=<content hash>` to every CSS, JS, image and sound reference, in `index.html` and `config.js`. A browser then downloads a file again only when its contents have changed.
+- It uses the Python standard library only, and running it twice changes nothing.
+- Files that don't exist yet stay unversioned and get stamped once you add them.
+- Upload the updated `index.html` and `config.js` together with the files you changed.
+- `index.html` itself can't carry a version. GitHub Pages lets browsers cache it for up to **10 minutes**, so a change can take that long to show. A hard refresh (Ctrl+Shift+R, or Cmd+Shift+R on Mac) shows it immediately.
+
 ## 4. Publish on GitHub Pages
 1. Create a repo, for example `oasis`, and upload the **contents** of `site/`.
 2. Go to **Settings → Pages → Source: Deploy from a branch**, then select `main` and `/ (root)`.
