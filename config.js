@@ -12,6 +12,14 @@ window.OASIS_CONFIG = {
     apiKey: ""
   },
 
+  // Field-work location (Thonburirom Park). lat/lng are shown as text;
+  // mapUrl is the Google Maps share link that opens the named place.
+  location: {
+    lat: 13.650412602733983,
+    lng: 100.49109033083643,
+    mapUrl: "https://maps.app.goo.gl/QKwuzExMAnXcrMu4A"
+  },
+
   // Suggested time per visitor (Ajarn's rule). The timer only turns
   // amber when time is up; it never cuts a visitor off.
   timeLimitSeconds: 180,

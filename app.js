@@ -412,6 +412,15 @@
     show("choose");
   }
 
+  // Location link: the share link opens the named place; coordinates are the fallback.
+  if (C.location) {
+    const { lat, lng, mapUrl } = C.location;
+    const url = mapUrl || `https://www.google.com/maps/search/?api=1&query=${lat},${lng}`;
+    $("mapLink").href = url;
+    $("mapLink2").href = url;
+    $("coords").textContent = `${Math.abs(lat).toFixed(5)}° ${lat >= 0 ? "N" : "S"}, ${Math.abs(lng).toFixed(5)}° ${lng >= 0 ? "E" : "W"}`;
+  }
+
   buildLeafForm();
   applyLang();
   $("langSel").addEventListener("change", e => { window.OasisI18n.setLang(e.target.value); applyLang(); });
