@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Oasis in the Desert</title>
+<meta name="description" content="What happens to nature, and to our peace of mind, when one piece disappears?">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <span class="brand" data-i18n="brand">Oasis in the Desert</span>
+  <div class="top-right">
+    <span id="timer" class="timer" hidden>3:00</span>
+    <select id="langSel" class="lang" data-i18n-aria="langLabel" aria-label="Language">
+      <option value="en">English</option>
+      <option value="th">ไทย</option>
+    </select>
+  </div>
+</header>
+
+<div class="meters" id="meters" hidden>
+  <div class="meter">
+    <div class="meter-label"><span data-i18n="eco"></span><b id="ecoVal">100</b></div>
+    <div class="bar"><div class="fill eco" id="ecoBar"></div></div>
+  </div>
+  <div class="meter">
+    <div class="meter-label"><span data-i18n="peace"></span><b id="peaceVal">100</b></div>
+    <div class="bar"><div class="fill peace" id="peaceBar"></div></div>
+  </div>
+</div>
+
+<main>
+  <!-- 1. Intro -->
+  <section class="screen" id="s-intro">
+    <p class="eyebrow" data-i18n="eyebrow"></p>
+    <h1 data-i18n-html="heroHtml"></h1>
+    <p class="lead" data-i18n-html="introHtml"></p>
+    <ol class="steps">
+      <li data-i18n="step1"></li>
+      <li data-i18n="step2"></li>
+      <li data-i18n="step3"></li>
+    </ol>
+    <button class="btn primary" id="startBtn" data-i18n="start"></button>
+    <button class="btn link" id="treeOnlyBtn" data-i18n="treeOnly"></button>
+  </section>
+
+  <!-- 2. Choose -->
+  <section class="screen" id="s-choose" hidden>
+    <h2 data-i18n="chooseTitle"></h2>
+    <p class="lead small" data-i18n="chooseLead"></p>
+    <div class="grid" id="elementGrid"></div>
+  </section>
+
+  <!-- 3. Impact on nature -->
+  <section class="screen" id="s-impact" hidden>
+    <h2 id="impactTitle"></h2>
+    <div class="compare" id="compare">
+      <div class="img-wrap"><img id="imgBefore" alt=""><span class="tag real" data-i18n="tagReal"></span></div>
+      <div class="img-wrap after" id="afterWrap"><img id="imgAfter" alt=""><span class="tag ai" data-i18n="tagAi"></span></div>
+      <input type="range" id="slider" min="0" max="100" value="50" data-i18n-aria="sliderAria">
+      <div class="divider" id="divider"></div>
+    </div>
+    <p class="hint" data-i18n="sliderHint"></p>
+    <ol class="chain" id="chain"></ol>
+    <button class="btn primary" id="toMindBtn" data-i18n="toMind" hidden></button>
+  </section>
+
+  <!-- 4. Impact on mind -->
+  <section class="screen" id="s-mind" hidden>
+    <h2 data-i18n="mindTitle"></h2>
+    <div class="card mind">
+      <div class="big-emoji" id="mindEmoji">😟</div>
+      <p id="mindText"></p>
+    </div>
+    <p class="lead small" data-i18n="mindLead"></p>
+    <button class="btn primary" id="restoreBtn" data-i18n="restore"></button>
+  </section>
+
+  <!-- 5. Restored -->
+  <section class="screen" id="s-restored" hidden>
+    <h2 data-i18n="restoredTitle"></h2>
+    <div class="card restored">
+      <div class="big-emoji">😌</div>
+      <p data-i18n-html="restoredHtml"></p>
+    </div>
+    <p class="quote" data-i18n="quote"></p>
+    <button class="btn primary" id="toLeafBtn" data-i18n="toLeaf"></button>
+  </section>
+
+  <!-- 6. Leaf -->
+  <section class="screen" id="s-leaf" hidden>
+    <h2 data-i18n="leafTitle"></h2>
+    <form id="leafForm" novalidate>
+      <label for="leafText" data-i18n="leafLabel"></label>
+      <textarea id="leafText" maxlength="120" rows="3" data-i18n-ph="leafPh" required></textarea>
+      <div class="counter"><span id="leafCount">0</span>/120</div>
+
+      <label for="leafName" data-i18n-html="nameLabelHtml"></label>
+      <input type="text" id="leafName" maxlength="30" data-i18n-ph="namePh" autocomplete="nickname">
+
+      <fieldset>
+        <legend data-i18n="moodLegend"></legend>
+        <div class="moods" id="moodPick"></div>
+      </fieldset>
+
+      <fieldset>
+        <legend data-i18n="calmLegend"></legend>
+        <div class="calm" id="calmPick"></div>
+      </fieldset>
+
+      <p class="error" id="leafError" hidden></p>
+      <button class="btn primary" type="submit" id="leafSubmit" data-i18n="submit"></button>
+    </form>
+  </section>
+
+  <!-- 7. Oasis Tree -->
+  <section class="screen" id="s-tree" hidden>
+    <h2 data-i18n="treeTitle"></h2>
+    <p class="lead small" id="treeSummary"></p>
+    <div class="tree-box"><svg id="treeSvg" viewBox="0 0 400 420" role="img" data-i18n-aria="treeAria"></svg></div>
+    <p class="hint" id="leafReader"></p>
+    <div class="stats" id="stats"></div>
+    <button class="btn" id="againBtn" data-i18n="again"></button>
+    <p class="mode" id="modeNote"></p>
+  </section>
+</main>
+
+<audio id="audio" preload="none"></audio>
+<script src="config.js"></script>
+<script src="i18n.js"></script>
+<script src="db.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
