@@ -26,9 +26,9 @@ window.OasisI18n = (function () {
       chooseLead: "Tap the part of the park you think matters least.",
       impactTitle: "Without {name}…",
       tagReal: "REAL PHOTO",
-      tagAi: "AI-GENERATED",
+      tagAi: "GENERATED PREDICTION",
       sliderAria: "Compare before and after",
-      sliderHint: "Drag the slider to compare the real park with the AI-generated \"after\".",
+      sliderHint: "Drag the slider to compare the real park with the generated prediction.",
       toMind: "And how does this affect people? →",
       mindTitle: "It's not only the park that suffers",
       mindLead: "When nature loses a piece, we lose a piece of our calm. Nature looks after our mental well-being, and we can look after nature.",
@@ -64,7 +64,7 @@ window.OasisI18n = (function () {
       again: "Play again",
       demo: "Demo mode: leaves are saved in this browser only. Add Firebase settings in config.js to share them.",
       before: "Before",
-      afterAi: "After (AI)",
+      afterAi: "After (generated prediction)",
       missing: "{label} photo missing: {src}"
     },
     th: {
@@ -90,9 +90,9 @@ window.OasisI18n = (function () {
       chooseLead: "แตะส่วนของสวนที่คุณคิดว่าสำคัญน้อยที่สุด",
       impactTitle: "หากไม่มี{name}…",
       tagReal: "ภาพจริง",
-      tagAi: "ภาพสร้างโดย AI",
+      tagAi: "ภาพคาดการณ์ที่สร้างขึ้น",
       sliderAria: "เปรียบเทียบก่อนและหลัง",
-      sliderHint: "กรุณาเลื่อนแถบเพื่อเปรียบเทียบสวนจริงกับภาพ \"หลัง\" ที่สร้างโดย AI",
+      sliderHint: "กรุณาเลื่อนแถบเพื่อเปรียบเทียบสวนจริงกับภาพคาดการณ์ที่สร้างขึ้น",
       toMind: "แล้วสิ่งนี้ส่งผลต่อผู้คนอย่างไร →",
       mindTitle: "ไม่ใช่แค่สวนเท่านั้นที่ได้รับผลกระทบ",
       mindLead: "เมื่อธรรมชาติสูญเสียบางสิ่งไป เราก็สูญเสียความสงบในใจไปด้วย ธรรมชาติดูแลสุขภาพจิตของเรา และเราก็สามารถดูแลธรรมชาติได้เช่นกัน",
@@ -128,7 +128,7 @@ window.OasisI18n = (function () {
       again: "เล่นอีกครั้ง",
       demo: "โหมดทดลอง: ใบไม้จะถูกบันทึกไว้ในเบราว์เซอร์นี้เท่านั้น กรุณาใส่ค่า Firebase ใน config.js เพื่อแบ่งปันกับทุกคน",
       before: "ก่อน",
-      afterAi: "หลัง (AI)",
+      afterAi: "หลัง (ภาพคาดการณ์ที่สร้างขึ้น)",
       missing: "ไม่พบภาพ{label}: {src}"
     }
   };
