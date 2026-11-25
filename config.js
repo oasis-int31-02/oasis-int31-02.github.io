@@ -38,7 +38,7 @@ window.OASIS_CONFIG = {
     {
       id: "trees", icon: "🌳",
       name: { en: "Trees", th: "ต้นไม้" },
-      before: "images/trees-before.jpg?v=1872022ab3", after: "images/trees-after.jpg?v=d8c02061a7",
+      before: "images/trees-before.jpg?v=468b7fd95c", after: "images/trees-after.jpg?v=52a113975b",
       eco: 50, peace: 40,
       chain: {
         en: [
@@ -62,7 +62,7 @@ window.OASIS_CONFIG = {
     {
       id: "pond", icon: "💧",
       name: { en: "Pond & water", th: "บ่อน้ำและแหล่งน้ำ" },
-      before: "images/pond-before.jpg?v=c23b5f142f", after: "images/pond-after.jpg?v=1e2d59845a",
+      before: "images/pond-before.jpg?v=24921c561e", after: "images/pond-after.jpg?v=ce97b07b60",
       eco: 40, peace: 35,
       chain: {
         en: [
@@ -86,7 +86,7 @@ window.OASIS_CONFIG = {
     {
       id: "squirrels", icon: "🐿️",
       name: { en: "Squirrels", th: "กระรอก" },
-      before: "images/squirrels-before.jpg?v=4d5bef13ed", after: "images/squirrels-after.jpg?v=a13c8aa2b9",
+      before: "images/squirrels-before.jpg?v=0ef54e2b3f", after: "images/squirrels-after.jpg?v=66e2bde916",
       eco: 20, peace: 10,
       chain: {
         en: [
@@ -110,7 +110,7 @@ window.OASIS_CONFIG = {
     {
       id: "birds", icon: "🐦",
       name: { en: "Birds", th: "นก" },
-      before: "images/birds-before.jpg?v=2a14e65d64", after: "images/birds-after.jpg?v=369a409445",
+      before: "images/birds-before.jpg?v=cfc364f5f5", after: "images/birds-after.jpg?v=d69d2eba27",
       eco: 25, peace: 30,
       chain: {
         en: [
@@ -134,7 +134,7 @@ window.OASIS_CONFIG = {
     {
       id: "lizards", icon: "🦎",
       name: { en: "Monitor lizards", th: "ตัวเงินตัวทอง" },
-      before: "images/lizards-before.jpg?v=cdaa86e5b0", after: "images/lizards-after.jpg?v=be3e773418",
+      before: "images/lizards-before.jpg?v=48edd02580", after: "images/lizards-after.jpg?v=eb0dc4fc21",
       eco: 15, peace: 5,
       chain: {
         en: [
@@ -158,7 +158,7 @@ window.OASIS_CONFIG = {
     {
       id: "flowers", icon: "🌸",
       name: { en: "Flowers", th: "ดอกไม้" },
-      before: "images/flowers-before.jpg?v=108902dd78", after: "images/flowers-after.jpg?v=ece86f41eb",
+      before: "images/flowers-before.jpg?v=03a60d1273", after: "images/flowers-after.jpg?v=d357929b42",
       eco: 20, peace: 25,
       chain: {
         en: [
