@@ -86,18 +86,18 @@ window.OASIS_CONFIG = {
     {
       id: "squirrels", icon: "🐿️",
       name: { en: "Squirrels", th: "กระรอก" },
-      before: "images/squirrels-before.jpg", after: "images/squirrels-after.jpg",
+      before: "images/squirrels-before.jpg?v=4d5bef13ed", after: "images/squirrels-after.jpg?v=a13c8aa2b9",
       eco: 20, peace: 10,
       chain: {
         en: [
-          "Squirrels bury seeds and forget many of them.",
-          "Those forgotten seeds stop growing into new trees.",
-          "Over the years the park slowly gets fewer trees."
+          "Squirrels bury seeds and forget many of them. That is how new trees get planted.",
+          "Without squirrels, no young trees grow to replace old trees as they age and die.",
+          "Over the years the park thins out: dying trees, bare ground and fewer birds."
         ],
         th: [
-          "กระรอกฝังเมล็ดพืชไว้ และลืมไปหลายเมล็ด",
-          "เมล็ดที่ถูกลืมเหล่านั้นจะไม่ได้เติบโตเป็นต้นไม้ต้นใหม่อีก",
-          "เมื่อเวลาผ่านไปหลายปี ต้นไม้ในสวนก็ค่อย ๆ ลดน้อยลง"
+          "กระรอกฝังเมล็ดพืชไว้ และลืมไปหลายเมล็ด นี่คือวิธีที่ต้นไม้ต้นใหม่ถูกปลูกขึ้น",
+          "หากไม่มีกระรอก ก็จะไม่มีต้นไม้ต้นใหม่เติบโตขึ้นมาแทนที่ต้นไม้เก่าที่แก่และตายไป",
+          "เมื่อเวลาผ่านไปหลายปี สวนก็โปร่งบางลง มีต้นไม้ที่กำลังตาย พื้นดินโล่งเตียน และนกน้อยลง"
         ]
       },
       mind: {
@@ -139,13 +139,13 @@ window.OASIS_CONFIG = {
       chain: {
         en: [
           "Monitor lizards stop eating rats, dead animals and scraps.",
-          "Rats and waste build up along the paths and plants.",
-          "The park becomes less clean and less healthy."
+          "More rats and waste build up along the paths and plants.",
+          "Cleaning staff need much more time and effort to keep the park clean and healthy."
         ],
         th: [
           "ไม่มีตัวเงินตัวทองคอยกินหนู ซากสัตว์ และเศษอาหาร",
-          "หนูและขยะสะสมตามทางเดินและแปลงต้นไม้",
-          "สวนสะอาดน้อยลงและไม่ถูกสุขลักษณะ"
+          "หนูและขยะสะสมตามทางเดินและแปลงต้นไม้มากขึ้น",
+          "เจ้าหน้าที่ทำความสะอาดต้องใช้เวลาและแรงงานมากขึ้นเพื่อรักษาความสะอาดและสุขอนามัยของสวน"
         ]
       },
       mind: {
