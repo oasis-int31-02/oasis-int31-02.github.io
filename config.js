@@ -110,7 +110,7 @@ window.OASIS_CONFIG = {
     {
       id: "birds", icon: "🐦",
       name: { en: "Birds", th: "นก" },
-      before: "images/birds-before.jpg", after: "images/birds-after.jpg",
+      before: "images/birds-before.jpg?v=2a14e65d64", after: "images/birds-after.jpg?v=369a409445",
       eco: 25, peace: 30,
       chain: {
         en: [
