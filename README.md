@@ -131,7 +131,7 @@ When a visitor taps **Bring it back**, that element's nature sound fades in and 
 | Pond & water | `sounds/pond.mp3` | Fountain and flowing water |
 | Squirrels | `sounds/squirrels.mp3` | Squirrels chattering |
 | Birds | `sounds/birds.mp3` | Morning birdsong |
-| Monitor lizards | `sounds/lizards.mp3` | Rustle in the grass, splash into water |
+| Monitor lizards | `sounds/lizards.mp3` | Rustle in the grass |
 | Flowers | `sounds/flowers.mp3` | Bees humming, soft breeze |
 
 - **Format:** 15–30 second loops, MP3 at 96–128 kbps, about 300 KB each. Trim silence at the start and end so the loop is seamless.

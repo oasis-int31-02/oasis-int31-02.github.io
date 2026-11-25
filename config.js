@@ -134,17 +134,17 @@ window.OASIS_CONFIG = {
     {
       id: "lizards", icon: "🦎",
       name: { en: "Monitor lizards", th: "ตัวเงินตัวทอง" },
-      before: "images/lizards-before.jpg", after: "images/lizards-after.jpg",
+      before: "images/lizards-before.jpg?v=cdaa86e5b0", after: "images/lizards-after.jpg?v=be3e773418",
       eco: 15, peace: 5,
       chain: {
         en: [
           "Monitor lizards stop eating rats, dead animals and scraps.",
-          "Rats and waste build up around the pond.",
+          "Rats and waste build up along the paths and plants.",
           "The park becomes less clean and less healthy."
         ],
         th: [
           "ไม่มีตัวเงินตัวทองคอยกินหนู ซากสัตว์ และเศษอาหาร",
-          "หนูและขยะสะสมอยู่รอบบ่อน้ำ",
+          "หนูและขยะสะสมตามทางเดินและแปลงต้นไม้",
           "สวนสะอาดน้อยลงและไม่ถูกสุขลักษณะ"
         ]
       },
@@ -153,7 +153,7 @@ window.OASIS_CONFIG = {
         th: "สวนที่สะอาดและสมบูรณ์คือสถานที่ที่ผู้คนรู้สึกปลอดภัยและสบายใจที่จะมาพักผ่อน"
       },
       sound: "sounds/lizards.mp3?v=8b000d6ac1",
-      soundCaption: { en: "A rustle in the grass and a splash into the pond", th: "เสียงสวบสาบในพงหญ้าและเสียงลงน้ำ" }
+      soundCaption: { en: "A rustle in the grass", th: "เสียงสวบสาบในพงหญ้า" }
     },
     {
       id: "flowers", icon: "🌸",
